@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"style.min.css","sourcesContent":[]}
+{"version":3,"sources":["blocks/header.less","blocks/layout.less"],"names":[],"mappings":"AAAA,O,CACE,U,CACA,Y,CACA,4C,CACA,qB,CACA,0B,CCLF,I,CACE,Q,CACA,S","file":"style.min.css","sourcesContent":[".header{\r\n  width: 100%;\r\n  height: 300px;\r\n  background-image: url(\"../img/PhotoFilter.jpg\");\r\n  background-size: cover;\r\n  background-position: center;\r\n}\r\n","body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n"]}
