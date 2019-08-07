@@ -9,8 +9,26 @@
   <title>Bike</title>
 </head>
 <body>
+  <include src="build/img/sprite.svg"></include>
   <header class="header">
-
+    <div class="header__menu">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">
+          <svg class="header__logo-img">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </a>
+      </div>
+<div class="header__button-container">
+  <button class="header__button header__button--open header__button--close" type="button" name="button">
+    <span class="header__button-pic">
+      <svg class="header__button-svg">
+        <use xlink:href="#iconfinder_menu-alt_134216"></use>
+       </svg>
+    </span>
+  </button>
+</div>
+    </div>
   </header>
 </body>
 </html>
