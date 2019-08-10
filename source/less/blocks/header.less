@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  height: 500px;
   padding-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
@@ -32,6 +33,9 @@
 }
 
 .header__navigation-list {
+  &--opened {
+    visibility: visible;
+  }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -45,11 +49,22 @@
   &:last-child li {
     margin-top: 10px;
   }
+  &--closed{
+    visibility: hidden;
+  }
+}
+
+.header__navigation-item {
+  position: relative;
+  &:hover .header__navigation-sublist,
+  &:focus .header__navigation-sublist,
+  &:active .header__navigation-sublist {
+    display: block;
+  }
 }
 
 .header__button {
   order: 2;
-  flex-basis: 11%;
   height: 40px;
   background-color: transparent;
   border: none;
@@ -61,7 +76,7 @@
     transition: background 0.5s;
   }
 
-  &:focus .header__button-svg {
+  &:focus svg {
     fill: #000000;
   }
 
@@ -76,21 +91,42 @@
   }
 }
 
-
+.header__button-svg__cross {
+  &--closed{
+    display: block;
+  }
+  &--opened {
+    display: none;
+  }
+  fill: #ffffff;
+  width: 30px;
+  height: 40px;
+}
 .header__button-svg {
+  &--opened {
+    display: none;
+  }
   width: 30px;
   height: 40px;
   fill: #ffffff;
+  &--closed {
+    display: block;
+  }
 }
 
 .header__navigation-link {
   &--opened {
     visibility: visible;
+
   }
 }
 
 .header__navigation-sublist {
   display: none;
+  position: absolute;
+  z-index: 1;
+  left: -120px;
+  top: 5px;
   border: 1px solid black;
   margin: 0;
   padding: 0;
@@ -101,6 +137,11 @@
 
 .header__navigation-link {
   width: 100px;
+  &:hover {
+    border: 1px solid black;
+
+    box-shadow: 2px 3px 0 0 #fcff19;
+  }
 }
 
 .header__navigation-link,
