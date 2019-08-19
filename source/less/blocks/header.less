@@ -36,28 +36,29 @@
   &--opened {
     visibility: visible;
   }
+  .list();
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: relative;
   top: 5px;
   right: 22px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
   &:last-child li {
     margin-top: 10px;
   }
-  &--closed{
+
+  &--closed {
     visibility: hidden;
   }
 }
 
 .header__navigation-item {
   position: relative;
-  &:hover .header__navigation-sublist,
+
+  &:active .header__navigation-sublist,
   &:focus .header__navigation-sublist,
-  &:active .header__navigation-sublist {
+  &:hover .header__navigation-sublist {
     display: block;
   }
 }
@@ -91,9 +92,10 @@
 }
 
 .header__button-svg__cross {
-  &--closed{
+  &--closed {
     display: block;
   }
+
   &--opened {
     display: none;
   }
@@ -101,6 +103,7 @@
   width: 30px;
   height: 40px;
 }
+
 .header__button-svg {
   &--opened {
     display: none;
@@ -108,6 +111,7 @@
   width: 30px;
   height: 40px;
   fill: #ffffff;
+
   &--closed {
     display: block;
   }
@@ -117,6 +121,7 @@
   &--opened {
     visibility: visible;
   }
+
   &--icon {
     display: flex;
     justify-content: center;
@@ -140,9 +145,9 @@
 .header__navigation-link {
   width: 100px;
   text-align: center;
+
   &:hover {
     border: 1px solid black;
-
     box-shadow: 2px 3px 0 0 #fcff19;
   }
 }
@@ -165,7 +170,6 @@
   &:hover {
     background-color: #fcff19;
     border-radius: 10px;
-    transition: background 0.5s;
     color: #000000;
   }
 
@@ -179,37 +183,64 @@
 .header__navigation-sublink {
   color: #000000;
 }
-
 @media (min-width: 1100px) {
   .header {
     padding-top: 0;
   }
+
   .header__logo {
     margin-top: 27px;
   }
+
   .header__button {
     display: none;
   }
+
   .header__navigation-list {
     visibility: visible;
     flex-direction: row;
   }
+
   .header__logo {
     flex-basis: auto;
   }
+
   .header__button-container {
     flex-basis: auto;
   }
+
   .header__navigation-item {
     margin-top: 0;
+
     &:last-child li {
       margin-top: 0;
     }
   }
+
   .header__navigation-link {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &--icon {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
     &:hover {
       border: 0;
       box-shadow: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
+  }
+
+
+
+  .header__navigation-sublist {
+    border-top-left-radius: 0;
+    top: auto;
+    border: 0;
+    left: 0;
+    width: 220px;
+    text-align: left;
+    padding: 14px;
   }
 }
