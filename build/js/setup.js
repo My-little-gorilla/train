@@ -1,3 +1,4 @@
+(function() {
 var button = document.querySelector('.header__button');
 var buttonPic = document.querySelector('.header__button-svg');
 var firstList = document.querySelector('.header__navigation-list');
@@ -12,6 +13,6 @@ button.addEventListener('click', function() {
     firstList.classList.add('header__navigation-list--closed');
     buttonPic.classList.add('header__button-svg--closed');
     closedCross.classList.add('header__button-svg__cross--opened');
-
   }
 })
+})()
