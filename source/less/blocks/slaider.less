@@ -1,14 +1,27 @@
+.slaider {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
 .slaider__list {
   .list();
 }
 .slaider__list {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  width: 318%;
   color: #ffffff;
 }
 .slaider__item {
-  width: 100%;
+  flex-basis: 100%;
+  text-align: center;
 }
+
 .slaider__name{
+  font-size: 36px;
+  margin-top: 240px;
+  margin-bottom: 0;
 }
 .slaider__link {
   padding: 16px 29px;
@@ -17,4 +30,29 @@
   font-size: 9px;
   color: #fcff19;
   text-decoration: none;
+}
+
+.slaider__description {
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.slaider__name-yellow {
+  color: #fcff19;
+}
+
+.slaider__button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  &--right {
+    right: 0;
+  }
+}
+
+.slaider__button-image {
+  width: 30px;
+  height: 30px;
 }

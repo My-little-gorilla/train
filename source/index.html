@@ -78,7 +78,7 @@
           <h2 class="slaider__name">HANDMADE BICYCLE</h2>
           <p class="slaider__description">You<span class="slaider__name-yellow">create</span>the
             <span class="slaider__name-yellow">journey</span>, we supply the
-             <span class="slaider__name-yellow">parts</span>.
+            <span class="slaider__name-yellow">parts</span>.
           </p>
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
@@ -86,46 +86,35 @@
           <h2 class="slaider__name">HANDMADE BICYCLE</h2>
           <p class="slaider__description">You<span class="slaider__name-yellow">create</span>the
             <span class="slaider__name-yellow">journey</span>, we supply the
-             <span class="slaider__name-yellow">parts</span>.
+            <span class="slaider__name-yellow">parts</span>.
           </p>
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
           <h2 class="slaider__name">HANDMADE BICYCLE</h2>
-          <p class="slaider__description">You<span class="slaider__name-yellow">create</span>the
-            <span class="slaider__name-yellow">journey</span>, we supply the
-             <span class="slaider__name-yellow">parts</span>.
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+             the
+            <span class="slaider__name-yellow"> journey</span>,
+             we supply the
+            <span class="slaider__name-yellow">parts</span>.
           </p>
           <a href="#" class="slaider__link">SHOP BIKES</a>
-        </li>
-        <li class="claider__toggle">
-          <ul class="claider__toggle-list">
-            <li class="slaider__toggle-item"><input class="visually-hidden" type="checkbox" id="ckeck1"><label for="ckeck1"></label></li>
-            <li class="slaider__toggle-item"><input class="visually-hidden" type="checkbox" id="ckeck2"><label for="ckeck2"></label></li>
-            <li class="slaider__toggle-item"><input class="visually-hidden" type="checkbox" id="ckeck3"><label for="ckeck3"></label></li>
-          </ul>
         </li>
       </ul>
+      <button class="slaider__button slaider__button--left">
+        <svg class="slaider__button-image">
+          <use xlink:href="#buttonLeft"></use>
+        </svg>
+      </button>
+      <button class="slaider__button slaider__button--right">
+        <svg class="slaider__button-image">
+          <use xlink:href="#fightButtonLink"></use>
+        </svg>
+      </button>
     </div>
   </header>
-  <script type="text/javascript">
-    var button = document.querySelector('.header__button');
-    var buttonPic = document.querySelector('.header__button-svg');
-    var firstList = document.querySelector('.header__navigation-list');
-    var closedCross = document.querySelector('.header__button-svg__cross')
-    console.log(closedCross);
-    button.addEventListener('click', function() {
-      if (firstList.classList.contains('header__navigation-list--closed')) {
-        firstList.classList.remove('header__navigation-list--closed');
-        buttonPic.classList.remove('header__button-svg--closed');
-        closedCross.classList.remove('header__button-svg__cross--opened');
-      } else {
-        firstList.classList.add('header__navigation-list--closed');
-        buttonPic.classList.add('header__button-svg--closed');
-        closedCross.classList.add('header__button-svg__cross--opened');
-
-      }
-    })
+  <script src="js/setup.js">
   </script>
 </body>
 
