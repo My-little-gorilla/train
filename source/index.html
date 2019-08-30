@@ -131,6 +131,84 @@
           </p>
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+        <li class="slaider__item">
+          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <p class="slaider__description">You
+            <span class="slaider__name-yellow"> create </span>
+            the
+            <span class="slaider__name-yellow"> journey</span>,
+            we supply the
+            <span class="slaider__name-yellow">parts</span>.
+          </p>
+          <a href="#" class="slaider__link">SHOP BIKES</a>
+        </li>
+
       </ul>
       <button class="slaider__button slaider__button--left">
         <svg class="slaider__button-image">
@@ -150,32 +228,41 @@
   <script src="js/setup.js">
   </script>
   <script type="text/javascript">
-   var buttonLeft = document.querySelector(".slaider__button--left");
-   var buttonRight = document.querySelector(".slaider__button--right");
-   var slides = document.querySelectorAll(".slaider__item");
+    var buttonLeft = document.querySelector(".slaider__button--left");
+    var buttonRight = document.querySelector(".slaider__button--right");
+    var slides = document.querySelectorAll(".slaider__item");
+    var slider = document.querySelector(".slaider__list");
+    var rect = slider.getBoundingClientRect();
+    var total = 0;
 
 
+     var startPosition = function () {
+       for (var i = 0; i < slides.length; i++) {
+         slides[i].style.transform = 'translateX(' + (i + '00') + '%' + ')';
+       }
+     }()
 
-    var getSlidesArr = function() {
-      var slidesArr = [];
-      var sliderCondition;
-      for (i = 0; i < slides.length; i++) {
-        slidesArr[i] = slides[i];
-      }
-      console.log(slidesArr);
-      return slidesArr;
+
+    var getSlidesArr = function(singh) {
+      total += rect.width;
     }
 
-
-    var slideTranslate = function() {
-      var slides = getSlidesArr();
-      var conditiona = [];
-      for (i = 0; i < slides.length; i++) {
-      slides[i].style.transform = 'translateX' + '(' + '-' + i + '00%' + ')';
+    var slideTranslate = function(singh) {
+      slider.style.transform += 'translateX(' + singh + rect.width + 'px' + ')';
     }
-    return slides;
-  }
-    buttonLeft.addEventListener('click', slideTranslate);
+
+    buttonRight.addEventListener('click', function() {
+      slideTranslate('');
+      getSlidesArr();
+    });
+    buttonLeft.addEventListener('click', function() {
+      slideTranslate('-');
+      getSlidesArr();
+    });
+
+    // buttonRight.addEventListener('click', function() {
+    //   slideTranslate(false);
+    // });
   </script>
 </body>
 
