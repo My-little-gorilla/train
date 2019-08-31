@@ -100,23 +100,7 @@
     <div class="slaider">
       <ul class="slaider__list">
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE1</h2>
-          <p class="slaider__description">You<span class="slaider__name-yellow">create</span>the
-            <span class="slaider__name-yellow">journey</span>, we supply the
-            <span class="slaider__name-yellow">parts</span>.
-          </p>
-          <a href="#" class="slaider__link">SHOP BIKES</a>
-        </li>
-        <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE2</h2>
-          <p class="slaider__description">You<span class="slaider__name-yellow">create</span>the
-            <span class="slaider__name-yellow">journey</span>, we supply the
-            <span class="slaider__name-yellow">parts</span>.
-          </p>
-          <a href="#" class="slaider__link">SHOP BIKES</a>
-        </li>
-        <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 1</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -127,7 +111,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 2</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -138,7 +122,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 3</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -149,7 +133,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 4</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -160,7 +144,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 5</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -171,7 +155,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 6</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -182,7 +166,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 7</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -193,7 +177,7 @@
           <a href="#" class="slaider__link">SHOP BIKES</a>
         </li>
         <li class="slaider__item">
-          <h2 class="slaider__name">HANDMADE BICYCLE3</h2>
+          <h2 class="slaider__name">HANDMADE BICYCLE 8</h2>
           <p class="slaider__description">You
             <span class="slaider__name-yellow"> create </span>
             the
@@ -217,47 +201,33 @@
       </button>
     </div>
   </header>
-  <section class="main">
+  <main class="main">
+    <section class="categories">
+      <h2 class="categories__title">CATEGORIES</h2>
+      <ul class="categories__list">
+        <li class="categories__item">
+          <h3 class="categories__name">FIXED / SINGLE SPEED</h3>
+          <p class="categories__description">Are You ready for the 27.5 Revolution?</p>
+          <a href="" class="categories__link">GO TO STORE</a>
+        </li>
+        <li class="categories__item">
+          <h3 class="categories__name">PREMIUM SERIES</h3>
+          <p class="categories__description">Exclusive  Bike Components</p>
+          <a href="" class="categories__link">GO TO STORE</a>
+        </li>
+        <li class="categories__item">
+          <h3 class="categories__name">CITY BIKES</h3>
+          <p class="categories__description">Street Playground</p>
+          <a href="" class="categories__link">GO TO STORE</a>
+        </li>
+      </ul>
+    </section>
 
-  </section>
+  </main>
   <script src="js/setup.js">
   </script>
-  <script type="text/javascript">
-    var buttonLeft = document.querySelector(".slaider__button--left");
-    var buttonRight = document.querySelector(".slaider__button--right");
-    var slides = document.querySelectorAll(".slaider__item");
-    var slider = document.querySelector(".slaider__list");
-    var rect = slider.getBoundingClientRect();
-    var total = 0;
+  <script src="js/slider.js">
 
-
-     var startPosition = function () {
-       for (var i = 0; i < slides.length; i++) {
-         slides[i].style.transform = 'translateX(' + (i + '00') + '%' + ')';
-       }
-     }()
-
-
-    var getSlidesArr = function(singh) {
-      total += rect.width;
-    }
-
-    var slideTranslate = function(singh) {
-      slider.style.transform += 'translateX(' + singh + rect.width + 'px' + ')';
-    }
-
-    buttonRight.addEventListener('click', function() {
-      slideTranslate('');
-      getSlidesArr();
-    });
-    buttonLeft.addEventListener('click', function() {
-      slideTranslate('-');
-      getSlidesArr();
-    });
-
-    // buttonRight.addEventListener('click', function() {
-    //   slideTranslate(false);
-    // });
   </script>
 </body>
 
