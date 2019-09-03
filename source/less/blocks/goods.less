@@ -1,0 +1,127 @@
+.goods__checkbox-list, .goods__list {
+  .list();
+}
+
+.goods {
+  text-align: center;
+}
+
+.goods__worth-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods__name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 11px;
+}
+.goods__worth {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods__good-worth {
+  align-self: flex-start;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.goods__items {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.goods__checkbox-wrap {
+  .list();
+  position: relative;
+}
+
+.goods__checkbox-itm {
+  display: none;
+  opacity: 1;
+}
+.goods__checkbox-wrap:hover .goods__checkbox-itm,
+ .goods__checkbox-wrap:active .goods__checkbox-itm  {
+  display: block;
+}
+.goods__label {
+  position: relative;
+}
+.goods__checkbox-indicator + label::before {
+     position: absolute;
+     content: '';
+     height: 18px;
+     width: 18px;
+     left: -23px;
+     background-image: url('../img/iconfinder_check-box-outline-blank_326558.svg');
+   }
+
+.goods__img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.goods__checkbox-indicator:checked + label::after {
+  position: absolute;
+  content: '';
+  height: 34px;
+  width: 19px;
+  top: -11px;
+  left: -18px;
+  background-image: url('../img/iconfinder_Check_1063906.svg');
+  background-repeat: repeat;
+  background-position: center;
+}
+.goods__checkbox-name a {
+  display: block;
+  padding-left: 22px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 50px;
+  margin-right: 10px;
+  font-size: 10px;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.goods__form {
+  display: flex;
+}
+
+.goods__button {
+  background-color: #b7b7b7;
+  width: 97px;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.goods__button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.goods__checkbox-itm {
+  position: absolute;
+  padding-top: 7px;
+  text-align: left;
+
+}
+.goods__checkbox-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  right: -18px;
+  top: 45px;
+  border: 2px solid;
+  width: 134px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding-left: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
