@@ -1,0 +1,115 @@
+.header {
+  position: relative;
+  padding-top: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+  background-image: url("../img/Guitar copy.jpg");
+  background-position: center 10%;
+  overflow: hidden;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: inherit;
+}
+
+.header__list {
+  display: flex;
+  justify-content: flex-start;
+  width: 440px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__item {
+  position: relative;
+  margin-right: 30px;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 6px;
+    right: -17px;
+    height: 6px;
+    width: 6px;
+    background-color: #826b60;
+    border-radius: 50%;
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.header__link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #241c18;
+  font-family: "Lora";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header__title-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+}
+
+.header__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.header__background-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header__title {
+  display: flex;
+  align-self: center;
+  margin: 0;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 7vw;
+  color: #e4dddb;
+  text-transform: uppercase;
+  &--white {
+    color: #241c18;
+  }
+}
+
+.header__background {
+  position: absolute;
+}
+
+.header__background-text {
+  position: relative;
+  flex-basis: 10%;
+  padding: 0;
+  text-align: center;
+  font-size: 1.0vw;
+  font-family: "Lora";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 26px;
+  opacity: 0.1;
+  z-index: 0;
+  &:first-child, &:last-child {
+    bottom:100px;
+  }
+  &:nth-child(2) {
+    bottom: 150px;
+  }
+  &:nth-child(3) {
+    bottom: 125px;
+  }
+}
