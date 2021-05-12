@@ -19,7 +19,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "posthtml-include": "^1.2.0"
   },
   "scripts": {
