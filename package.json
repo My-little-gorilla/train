@@ -5,7 +5,7 @@
   "description": "some",
   "devDependencies": {
     "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "browser-sync": "2.27.x",
     "deep-extend": "^0.6.0",
     "gulp": "4.0.x",
     "gulp-cheerio": "^0.6.3",
